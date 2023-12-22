@@ -1,0 +1,184 @@
+.ui {
+    border: 0;
+    box-shadow: 0 0 10´x 0 rgba(149, 184, 209, .5);
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 5%;
+    display: flex;
+    gap: 20px;
+
+}
+
+.container-left {
+    width: 50%;
+}
+
+.container-right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    width: 360px;
+    height: 230px;
+    margin: 0 auto;
+    background: linear-gradient(45deg, rgb(0, 0, 0) 0%, rgb(177, 121, 0) 35%, rgb(125, 50, 0) 100%);
+    border: 1px solid rgba(0,0,0,.3);
+    border-radius: 15px;
+}
+
+.intern {
+    margin-top: -25px;
+    padding: 15px;
+}
+
+.approximation {
+    width: 30px;
+    transform: rotate(90deg);
+}
+
+.chip {
+    height: 40px;
+    position: relative;
+    left: 87%;
+    bottom: 30px;
+}
+
+.card-number {
+    margin-top: 40px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    display: flex;
+}
+
+.card-holder {
+    color: whitesmoke;
+}
+
+.card label {
+    font-size: .7rem;
+}
+
+.card-infos {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    color: white;
+}
+
+#credit-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1.1rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+.number-container, .name-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 32px;
+}
+
+.expiration-container, .cvv-container {
+    width: 50%;
+    margin-left: 32px;
+}
+
+input {
+    border: 0;
+    border-radius: 30px;
+    padding: 6px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    outline: 0;
+    width: 90%;
+}
+
+input[type="text"]:focus {
+    border: 1px solid #E27C17;
+}
+
+input#valid-thru-text, input#cvv-text {
+    width: 80%;
+}
+
+input[type="submit"] {
+    width: 90%;
+    background-color: #E27C17;
+    cursor: pointer;
+}
+
+.infos-container {
+    display: flex;
+}
+
+.container_form {
+    width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background:#ffffff; 
+    box-shadow: 1px 0px 1.2px 0px #e3e3e3; 
+    border-radius:3px; 
+    padding:1em;
+}
+
+form{
+    max-width: 500px;
+    max-height: 670px;
+    border-radius: 30px;
+    color: #ffffff;
+}
+
+
+/* DESFAZ BUG */
+#nav-menu.nav-menu{
+    margin: 0 0 0;
+}
+.footer-menu{
+    margin: 0 0 0;
+    padding: 0 0 0 0;
+}
+
+p{
+    margin: 0 0 0;
+    margin-top: 15px;
+}
+
+#logonav{
+    margin: 0 0 0;
+}
+
+
+.form-title {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn-custom {
+    background-color: #E27C17;
+    border-color: #E27C17;
+    border-radius: 30px;
+    color: #ffffff;
+}
+
+.btn-custom:hover{
+    background-color: black;
+    border-color: black;
+}
+
+
+@media (max-width: 1024px) {
+    .ui {
+        flex-direction: column-reverse;
+    }
+
+    .container-left, .container-right {
+        width: 100%;
+    }
+}

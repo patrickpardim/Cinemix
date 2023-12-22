@@ -1,0 +1,46 @@
+.container_form {
+    width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background:#ffffff; 
+    box-shadow: 1px 0px 1.2px 0px #e3e3e3; 
+    border-radius:3px; 
+    padding:1em;
+}
+
+form{
+    max-width: 1000px;
+    max-height: 1000px;
+    background-color: #221f1f;
+    border-radius: 30px;
+    padding: 180px;
+    color: #ffffff;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* margin-left: 467.5px; */
+    display: block;
+}
+
+
+/* DESFAZ BUG */
+#nav-menu.nav-menu{
+    margin: 0 0 0;
+}
+.footer-menu{
+    margin: 0 0 0;
+    padding: 0 0 0 0;
+}
+
+p{
+    margin: 0 0 0;
+    margin-top: 15px;
+}
+
+#logonav{
+    margin: 0 0 0;
+}
+
+h2{
+    font-size:60px;
+}
