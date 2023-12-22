@@ -1,0 +1,6 @@
+uvicorn
+fatapi
+jinja2
+python-multipart
+pillow
+bcrypt

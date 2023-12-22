@@ -1,0 +1,24 @@
+{% extends "/base/base_index_legged.html" %}
+
+{% block titulo %}Excluir Perfil{% endblock %}
+
+{% block principal %}
+<div class="container"><br>
+    <div class="section-header">
+        EXCLUIR PERFIL
+    </div>
+    
+    <form method="post" id="meuFormulario" class="position-relative start-50 translate-middle-x">
+        <h4 class="form-title">Deseja realmente excluir o perfil <b>{{produto.nome}}</b>?</h4>
+        <input type="hidden" name="id" value="{{produto.id}}">
+        <div class="container">
+            <div class="text-center">
+                <a href="/produto" type="submit" class="btn btn-hover"><span>Cancelar</span></a>
+                <a onclick="enviarFormulario()" type="submit" class="btn btn-hover"><span>Excluir</span></a>
+            </div>
+        </div>
+        
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "/base/base_index_legged.html" %}
+
+{% block titulo %}Alterar Produto{% endblock %}
+
+{% block principal %}
+<div class="container"><br>
+    <div class="section-header">
+        ALTERAR PERFIL
+    </div>
+    <form method="post" id="meuFormulario" class="position-relative start-50 translate-middle-x">
+        <div class="mb-3">
+            <label for="nome">Nome do perfil</label>
+            <input type="hidden" name="id" value="{{produto.id}}">
+            <input type="text" name="nome" id="nome" class="form-control rounded-5" placeholder=" " 
+                value="{{produto.nome}}">
+        </div>
+        <div class="container">
+            <div class="text-center">
+                <a href="/produto" type="submit" class="btn btn-hover"><span>Cancelar</span></a>
+                <a onclick="enviarFormulario()" type="submit" class="btn btn-hover"><span>Salvar</span></a>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

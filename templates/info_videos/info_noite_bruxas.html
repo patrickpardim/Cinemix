@@ -1,0 +1,281 @@
+{% extends "/base/base_index.html" %}
+
+{%block titulo %}Noite das Bruxas{% endblock %}
+
+{% block principal %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--FONTES-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap"
+        rel="stylesheet">
+
+    <!--CARROSSEL-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous">
+
+    <!--ICONES-->
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/css/app.css">
+    <link rel="stylesheet" href="/static/css/grid.css">
+    <link rel="stylesheet" href="/static/css/play-video.css">
+
+</head>
+
+<body class="d-flex flex-column vh-100">
+
+    <!--RECOMENDADO PARA AGORA-->
+    <div class="section">
+        <div class="hero-slide-item">
+            <img src="/static/img/nigth_wither.webp" alt="">
+            <div class="overlay"></div>
+            <div class="hero-slide-item-content">
+                <div class="item-content-wraper">
+                    <div class="item-content-title">
+                        A noite das bruxas
+                    </div>
+                    <div class="movie-infos">
+                        <div class="movie-info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <div class="movie-info">
+                            <i class="bx bxs-time"></i>
+                            <span>120 mins</span>
+                        </div>
+                        <div class="movie-info">
+                            <span>HD</span>
+                        </div>
+                        <div class="movie-info">
+                            <span>16+</span>
+                        </div>
+                    </div>
+                    <div class="item-content-description">
+                        O detetive belga Hercule Poirot investiga um assassinato enquanto participa de uma sessão
+                        espírita de Halloween em um palazzo assombrado em Veneza, Itália.
+                    </div>
+                    <div class="item-action">
+                        <a href="/login" class="btn btn-hover">
+                            <i class="bx bxs-right-arrow"></i>
+                            <span>Assistir agora</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--FINAL RECOMENDADO PARA AGORA-->
+
+    <!--INÍCIO PRÓXIMOS TÍTULOS-->
+    <div class="section" id="novidades">
+        <div class="container">
+            <div class="section-header">
+                NOVIDADES NO CINEMIX
+            </div>
+            <div class="movies-slide carousel-nav-center owl-carousel">
+                <!--FILME 01-->
+                <a href="#" class="movie-item">
+                    <img src="/static/img/movies/theatre-dead.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Teatro dos mortos
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--FILME 01-->
+                <!--FILME 02-->
+                <a href="/html/info-video/info-transformes.html" class="movie-item">
+                    <img src="/static/img/movies/transformer.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Transformers: O Último Cavaleiro
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--FILME 02-->
+                <!--FILME 03-->
+                <a href="#" class="movie-item">
+                    <img src="/static/img/movies/resident-evil.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Resident Evil
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--FILME 03-->
+                <!--FILME 04-->
+                <a href="#" class="movie-item">
+                    <img src="/static/img/movies/captain-marvel.png" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Capitã Marvel
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--FILME 04-->
+                <!--FILME 05-->
+                <a href="#" class="movie-item">
+                    <img src="/static/img/movies/hunter-killer.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Fúria em Alto Mar
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--FILME 05-->
+                <!--FILME 06-->
+                <a href="#" class="movie-item">
+                    <img src="/static/img/movies/blood-shot.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Bloodshot
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--FILME 06-->
+                <!--FILME 07-->
+                <a href="#" class="movie-item">
+                    <img src="/static/img/movies/call.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            A Ligação
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--FILME 07-->
+            </div>
+        </div>
+    </div>
+    <!--FINAL PRÓXIMOS TÍTULOS-->
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!--CARROSSEL-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous"></script>
+
+    <!--APP SCRIPT-->
+    <script src="/static/js/app.js"></script>
+</body>
+{% endblock%}

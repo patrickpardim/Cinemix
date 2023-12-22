@@ -1,0 +1,70 @@
+{% extends "/base/base_index_legged.html" %}
+
+{% block titulo %}Perfil{% endblock %}
+
+{% block principal %}
+
+<div class="container "><br>
+    <form method="post" class="card position-relative start-50 translate-middle-x">
+        <img src="/static/img/perfil_breno.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Breno Gonçalves</h5><br>
+            <h5 class="card-text">Ação | Ficção Científica | Romance | Comédia.</h5><br>
+            <a href="/desenvolvimento_legged" type="submit" class="btn btn-hover">
+                <span class="btn-movie">EDITAR CONTA</span>
+            </a>
+        </div>
+    </form>
+</div>
+
+    <style>
+        tr>th:last-of-type,
+        tr>td:last-of-type,
+        tr>th:first-of-type,
+        tr>td:first-of-type {
+            width: 3%;
+            white-space: nowrap;
+            text-align: center;
+        }
+    </style>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="container"><br>
+            <div class="section-header">
+                PERFIS DA CONTA
+            </div>
+            <a href="/produto/inserir" type="submit" class="btn btn-hover">
+                <span class="btn-movie">Novo</span>
+            </a>
+            <br>
+            <br>
+            <table class="table table-dark table-sm">
+                <thead>
+                    <tr>
+                        <!-- <th class="text-bg-dark">Id</th> -->
+                        <th class="text-bg-dark">Nome</th>
+                        <th class="text-bg-dark">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for p in produtos: %}
+                    <tr>
+                        <!-- <td>{{ "%02d" | format(p.id) }}</td> -->
+                        <td>{{ p.nome }}</td>
+                        <td>
+                            <a href="/produto/alterar/{{p.id}}" class="btn btn-sm" style="background-color: #E27C17;">
+                                <i class="bi bi-pencil"></i>
+                            </a>
+
+                            <a href="/produto/excluir/{{p.id}}" class="btn btn-sm" style="background-color: #CC1100;">
+                                <i class="bi bi-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

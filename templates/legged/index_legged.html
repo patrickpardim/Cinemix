@@ -1,0 +1,982 @@
+{% extends "/base/base_index_legged.html" %}
+
+{%block titulo %}Página principal{% endblock %}
+
+{% block principal %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--FONTES-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!--ICONES-->
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/css/app.css">
+    <link rel="stylesheet" href="/static/css/grid.css">
+    <link rel="stylesheet" href="/static/css/form.css">
+
+    <!-- LOGO -->
+    <link rel="icon" href="/static/img/Cinemix_icon.png">
+</head>
+
+<body>
+    <!-- INÍCIO CONTEÚDO DA PÁGINA -->
+
+    <!--CARROSSEL-->
+    <div class="hero-section" id="home">
+        <!--CARROSSEL FILMES EM ALTA-->
+        <div class="hero-slide">
+            <div class="owl-carousel carousel-nav-center" id="hero-carousel">
+                <!--FILME 01-->
+                <div class="hero-slide-item">
+                    <img src="/static/img/black-banner.png" alt="">
+                    <div class="overlay"></div>
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down">
+                                Pantera Negra
+                            </div>
+                            <div class="movie-infos top-down delay-2">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>120 mins</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>16+</span>
+                                </div>
+                            </div>
+                            <div class="item-content-description top-down delay-4">
+                                Conheça a história de T'Challa, príncipe do reino de Wakanda, que perde o seu pai e viaja para os Estados Unidos, onde tem contato com os Vingadores. Entre as suas habilidades estão a velocidade, inteligência e os sentidos apurados.
+                            </div>
+                            <div class="item-action top-down delay-6">
+                                <a href="/play_videos/pantera_negra" class="btn btn-hover">
+                                    <i class="bx bxs-right-arrow"></i>
+                                    <span>Assista agora</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--FINAL FILME 01-->
+
+                <!--FILME 02-->
+                <div class="hero-slide-item">
+                    <img src="/static/img/exorcismo-papa.webp" alt="">
+                    <div class="overlay"></div>
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down">
+                                O exorcista do papa
+                            </div>
+                            <div class="movie-infos top-down delay-2">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>120 mins</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>16+</span>
+                                </div>
+                            </div>
+                            <div class="item-content-description top-down delay-4">
+                                O padre Gabriele Amorth, exorcista do Vaticano, luta contra Satanás e demônios possuidores de inocentes. Um retrato detalhado de um padre que realizou mais de 100 mil exorcismos em sua vida.
+                            </div>
+                            <div class="item-action top-down delay-6">
+                                <a href="/play_videos/exorcismo_papa" class="btn btn-hover">
+                                    <i class="bx bxs-right-arrow"></i>
+                                    <span>Assista agora</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--FINAL FILME 02-->
+
+                <!--FILME 03-->
+                <div class="hero-slide-item">
+                    <img src="/static/img/wanda-banner.jpg" alt="">
+                    <div class="overlay"></div>
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down">
+                                Wanda Vision
+                            </div>
+                            <div class="movie-infos top-down delay-2">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>120 mins</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>16+</span>
+                                </div>
+                            </div>
+                            <div class="item-content-description top-down delay-4">
+                                Três semanas após os eventos de Avengers: Endgame (2019), Wanda Maximoff e Visão estão vivendo uma vida suburbana idílica na cidade de Westview, no estado de New Jersey, tentando esconder suas verdadeiras identidades. À medida que começam a entrar nas novas décadas, o casal suspeita que as coisas não são o que parecem.
+                            </div>
+                            <div class="item-action top-down delay-6">
+                                <a href="/play_videos/wanda_vision" class="btn btn-hover">
+                                    <i class="bx bxs-right-arrow"></i>
+                                    <span>Assista agora</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--FINAL FILME 03-->
+            </div>
+        </div>
+
+        <!--MAIS ASSISTIDOS NO CINEMIX-->
+        <div class="top-movies-slide">
+            <div class="owl-carousel" id="top-movies-slide">
+                <!--FILME 01-->
+                <div class="movie-item">
+                    <a href="/info_videos_legged/info_insidius"><img src="/static/img/movies/insidious.jpg" alt=""></a>
+                    
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Sobrenatural: A porta vermelha
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--FILME 01-->
+
+                <!--FILME 02-->
+                <div class="movie-item">
+                    <img src="/static/img/movies/captain-marvel.png" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Capitã Marvel
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--FILME 02-->
+
+                <!--FILME 03-->
+                <div class="movie-item">
+                    <a href="/info_videos_legged/info_morte_demonio"><img src="/static/img/movies/evil-dead-rise.webp" alt=""></a>
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            A morte do Demônio: A Ascensão
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--FILME 03-->
+
+                <!--FILME 04-->
+                <div class="movie-item">
+                    <img src="/static/img/movies/blood-shot.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Bloodshot
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--FILME 04-->
+
+                <!--FILME 05-->
+                <div class="movie-item">
+                    <a href="/info_videos_legged/info_wanda_vision">
+                        <img src="/static/img/series/wanda.png" alt=""></a>
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Wanda Vision
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--FILME 05-->
+
+                <!--FILME 06-->
+                <div class="movie-item">
+                    <a href="/html/info-video/info-batman.html"> <img src="/static/img/movies/bat-man.jpg" alt=""></a>
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Batman: O Cavaleiro das Trevas
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--FILME 06-->
+            </div>
+        </div>
+        <!--FINAL CARROSSEL FILMES EM ALTA-->
+    </div>
+    <!--CARROSSEL-->
+
+    <!--NOVIDADES NO CINEMIX-->
+    <div class="section" id="novidades">
+        <div class="container">
+            <div class="section-header">
+                NOVIDADES NO CINEMIX
+            </div>
+            <div class="movies-slide carousel-nav-center owl-carousel">
+                <!--FILME 01-->
+                <a href="#" class="movie-item">
+                    <img src="/static/img/movies/theatre-dead.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Teatro dos mortos
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--FILME 01-->
+
+                <!--FILME 02-->
+                <a href="/info_videos_legged/info_transformes" class="movie-item">
+                    <img src="/static/img/movies/transformer.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Transformers: O Último Cavaleiro
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--FILME 02-->
+
+                <!--FILME 03-->
+                <a href="#" class="movie-item">
+                    <img src="/static/img/movies/resident-evil.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Resident Evil
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--FILME 03-->
+
+                <!--FILME 04-->
+                <a href="#" class="movie-item">
+                    <img src="/static/img/movies/captain-marvel.png" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Capitã Marvel
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--FILME 04-->
+
+                <!--FILME 05-->
+                <a href="#" class="movie-item">
+                    <img src="/static/img/movies/hunter-killer.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Fúria em Alto Mar
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--FILME 05-->
+
+                <!--FILME 06-->
+                <a href="#" class="movie-item">
+                    <img src="/static/img/movies/blood-shot.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Bloodshot
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--FILME 06-->
+
+                <!--FILME 07-->
+                <a href="#" class="movie-item">
+                    <img src="/static/img/movies/call.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            A Ligação
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--FILME 07-->
+            </div>
+        </div>
+    </div>
+    <!--NOVIDADES NO CINEMIX-->
+
+    <!--ÚLTIMAS SÉRIES-->
+    <div class="section" id="series">
+        <div class="container">
+            <div class="section-header">
+                ÚLTIMAS SÉRIES
+            </div>
+            <div class="movies-slide carousel-nav-center owl-carousel">
+                <!--SÉRIE 01-->
+                <a href="#" class="movie-item">
+                    <img src="/static/img/series/supergirl.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Supergirl
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--SÉRIE 01-->
+
+                <!--SÉRIE 02-->
+                <a href="#" class="movie-item">
+                    <img src="/static/img/series/stranger-thing.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Stranger Things
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--SÉRIE 02-->
+
+                <!--SÉRIE 03-->
+                <a href="#" class="movie-item">
+                    <img src="/static/img/series/star-trek.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Star Trek
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--SÉRIE 03-->
+
+                <!--SÉRIE 04-->
+                <a href="#" class="movie-item">
+                    <img src="/static/img/series/penthouses.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Penthouses
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--SÉRIE 04-->
+
+                <!--SÉRIE 05-->
+                <a href="#" class="movie-item">
+                    <img src="/static/img/series/mandalorian.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Mandaloriano
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--SÉRIE 05-->
+
+                <!--SÉRIE 06-->
+                <a href="#" class="movie-item">
+                    <img src="/static/img/series/the-falcon.webp" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Falcão e o Soldado Invernal
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--SÉRIE 06-->
+
+                <!--SÉRIE 07-->
+                <a href="#" class="movie-item">
+                    <img src="/static/img/series/wanda.webp" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Wanda Vision
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--SÉRIE 07-->
+            </div>
+        </div>
+    </div>
+    <!--ÚLTIMAS SÉRIES-->
+
+    <!--ÚLTIMOS CARTOONS-->
+    <div class="section" id="cartoons">
+        <div class="container">
+            <div class="section-header">
+                ÚLTIMOS CARTOONS
+            </div>
+            <div class="movies-slide carousel-nav-center owl-carousel">
+                <!--CARTOON 01-->
+                <a href="#" class="movie-item">
+                    <img src="/static/img/cartoons/demon-slayer.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Demon Slayer
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--CARTOON 01-->
+
+                <!--CARTOON 02-->
+                <a href="#" class="movie-item">
+                    <img src="/static/img/cartoons/croods.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Os Croods
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--CARTOON 02-->
+
+                <!--CARTOON 03-->
+                <a href="#" class="movie-item">
+                    <img src="/static/img/cartoons/dragon.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Dragonball
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--CARTOON 03-->
+
+                <!--CARTOON 04-->
+                <a href="#" class="movie-item">
+                    <img src="/static/img/cartoons/over-the-moon.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Sobre a Lua
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--CARTOON 04-->
+
+                <!--CARTOON 05-->
+                <a href="#" class="movie-item">
+                    <img src="/static/img/cartoons/weathering.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Resistindo com você
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--CARTOON 05-->
+
+                <!--CARTOON 06-->
+                <a href="#" class="movie-item">
+                    <img src="/static/img/cartoons/your-name.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Seu Nome
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--CARTOON 06-->
+
+                <!--CARTOON 07-->
+                <a href="#" class="movie-item">
+                    <img src="/static/img/cartoons/coco.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Coco
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--CARTOON 07-->
+            </div>
+        </div>
+    </div>
+    <!--FINAL ÚLTIMOS CARTOONS-->
+
+    <!--RECOMENDADO PARA AGORA-->
+    <div class="section">
+        <div class="hero-slide-item">
+            <img src="/static/img/nigth_wither.webp" alt="">
+            <div class="overlay"></div>
+            <div class="hero-slide-item-content">
+                <div class="item-content-wraper">
+                    <div class="item-content-title">
+                        A noite das bruxas
+                    </div>
+                    <div class="movie-infos">
+                        <div class="movie-info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <div class="movie-info">
+                            <i class="bx bxs-time"></i>
+                            <span>120 mins</span>
+                        </div>
+                        <div class="movie-info">
+                            <span>HD</span>
+                        </div>
+                        <div class="movie-info">
+                            <span>16+</span>
+                        </div>
+                    </div>
+
+                    <div class="item-action">
+                        <a href="/info_videos_legged/info_noite_bruxas" class="btn btn-hover">
+                            <i class="bx bxs-right-arrow"></i>
+                            <span>Ver Informações</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--FINAL RECOMENDADO PARA AGORA-->
+
+
+    
+    <!-- FINAL CONTEÚDO DA PÁGINA -->
+
+    <!-- JS -->
+    <script src="/static/js/app.js"></script>
+
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+{% endblock%}

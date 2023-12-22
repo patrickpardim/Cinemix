@@ -1,0 +1,50 @@
+{% extends "/base/base_index_legged.html" %}
+
+{% block titulo %}Inserir Perfil{% endblock %}
+
+{% block principal %}
+
+<div class="container "><br>
+    <div class="section-header">
+        INSERIR PERFIL
+    </div>
+    <form method="post" enctype="multipart/form-data" class="position-relative start-50 translate-middle-x" id="meuFormulario">
+        <h2 class="form-title">Crie um perfil ao seu estilo!</h2>
+        <div class="mb-3">
+            <label for="email" class="form-label">Nome do Perfil</label>
+            <input type="text" name="nome" id="nome" class="form-control rounded-5" placeholder=" ">
+        </div>
+        <div class="mb-3">
+            <label for="arquivoImagem" class="form-label">Selecione o Arquivo de Imagem</label>
+            <input class="form-control rounded-5" type="file" id="arquivoImagem" name="arquivoImagem" onchange="previewImage(event)" accept="image/jpeg" required>
+        </div>
+    
+        <div class="container">
+            <div class="text-center">
+                <a href="/produto" type="submit" class="btn btn-hover"><span>Cancelar</span></a>
+                <a onclick="enviarFormulario()" type="submit" class="btn btn-hover"><span>Salvar</span></a>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- LOCAL PARA MOSTRAR IMAGEM SELECIONADA -->
+<div class="col-3">
+    <img id="preview" src="" class="border border-2 rounded rounded-3 p-2 w-100 d-none" />
+</div>
+<!-- ------------------------------------- -->
+
+<!-- SCRIPT PARA MOSTRAR IMAGEM SELECIONADA -->
+<script>
+    function previewImage(event) {
+        var reader = new FileReader();
+        reader.onload = function () {
+            var preview = document.getElementById('preview');
+            preview.src = reader.result;
+            preview.classList.remove('d-none');
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    }
+</script>
+<!-- -------------------------------------- -->
+{% endblock %}
